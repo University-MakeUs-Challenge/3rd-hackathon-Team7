@@ -47,7 +47,7 @@ export const finishKakao = async(req,res) =>{
         conn = await pool.getConnection(async conn => conn);
         const addedUser = await insertUserSocial(conn, sqlParams);
         conn.release();
-    }
+    } 
     
     const jwtData = {
         email,
@@ -103,4 +103,29 @@ export const postUsersInterests = async(req,res) =>{
         }
     }
     res.send(JSON.stringify(ans));
+}
+
+export const signinUser = async(req,res) =>{
+    const {email, password} = req.body;
+
+    const conn = await pool.getConnection(async conn => conn);
+    const sql = `select password from User where email='${email}';`;
+    const [[{password:storedPass}]] = await conn.query(sql);
+
+    const isOk = await bcrypt.compare(password, storedPass);
+    if (isOk){
+        const loginToken = jwt.sign({email}, process.env.SECRET_KEY);
+        const ans = {
+            status : "login success!",
+            loginToken
+        }
+        res.send(JSON.stringify(ans));
+    }
+    else{
+        const ans = {
+            status: "fail",
+            message : "login failed"
+        }
+        res.send(JSON.stringify(ans));
+    }
 }
