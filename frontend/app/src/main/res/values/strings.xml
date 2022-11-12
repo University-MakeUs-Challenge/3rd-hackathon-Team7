@@ -11,4 +11,6 @@
     <string name="save">저장</string>
     <string name="community">커뮤니티</string>
     <string name="_sentence">같이 이야기 나눠요!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

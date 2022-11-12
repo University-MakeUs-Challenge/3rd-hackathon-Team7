@@ -7,9 +7,11 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.hackathon7.R
+import com.example.hackathon7.databinding.ActivityNaviBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.jiwoorld.umc.databinding.ActivityNaviBinding
+
 
 
 private const val TAG_MY = "my_fragment"
