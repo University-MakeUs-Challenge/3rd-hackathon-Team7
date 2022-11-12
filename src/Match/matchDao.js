@@ -13,8 +13,8 @@ async function selectTaggedUser(connection, matchData) {
     left join User on User.id = Timetable.userId 
     left join Interest on Interest.userId = Timetable.userId 
     where
-        Timetable.endTime < ${startTime} and
-        Timetable.endTime > ${startTime} and
+        Timetable.endTime <= ${startTime} and
+        Timetable.endTime >= ${startTime} and
         Interest.categoryId = ${tag}
     union
     select 
@@ -23,8 +23,8 @@ async function selectTaggedUser(connection, matchData) {
     left join User on User.id = Timetable.userId 
     left join Interest on Interest.userId = Timetable.userId 
     where
-        Timetable.startTime < ${endTime} and
-        Timetable.endTime > ${endTime} and
+        Timetable.startTime <= ${endTime} and
+        Timetable.endTime >= ${endTime} and
         Interest.categoryId = ${tag};
     `;
 
