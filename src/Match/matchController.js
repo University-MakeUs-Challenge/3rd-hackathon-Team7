@@ -1,4 +1,5 @@
 const matchProvider = require('./matchProvider');
+const matchService = require('./matchService');
 const db = require('../../config/database2');
 
 const matchController = {
@@ -35,7 +36,7 @@ const matchController = {
         }
     
         const userList = await matchProvider.retrieveUserList(matchData);
-        
+
         return res.send(userList);
     },
 
@@ -47,6 +48,19 @@ const matchController = {
         const userProfile = await matchProvider.retrieveUserProfile(id);
         
         return res.send(userProfile);
+    },
+
+    postTimes: async(req, res) => {
+        const {day, startTime, endTime, userId} = req.body;
+
+        const postTimeResponse = await matchService.createTime(
+            day,
+            startTime,
+            endTime,
+            userId
+        );
+
+        return res.send(postTimeResponse);
     }
 }
 

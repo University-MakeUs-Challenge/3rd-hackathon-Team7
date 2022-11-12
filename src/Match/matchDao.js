@@ -43,7 +43,22 @@ async function selectUserProfile(connection, id) {
     return userRows[0];
 }
 
+//시간표 입력
+async function insertTimetable(connection, insertTimetableParams) {
+    const insertTimetableQuery = `
+      INSERT INTO Timetable(day, startTime, endTime, userId)
+      VALUES (?, ?, ?, ?);
+      `;
+    const insertTimetableRow = await connection.query(
+        insertTimetableQuery,
+        insertTimetableParams
+    );
+
+    return insertTimetableRow;
+}
+
 module.exports = {
     selectTaggedUser,
-    selectUserProfile
+    selectUserProfile,
+    insertTimetable
 };
