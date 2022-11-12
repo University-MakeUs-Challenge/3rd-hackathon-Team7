@@ -22,9 +22,9 @@ const matchController = {
         const tag = req.body.tag;
     
         //if(!day) return res.send('EMPTY_DATA_DAY');
-        if(!startTime) return res.send('EMPTY_DATA_STARTTIME');
-        else if(!endTime) return res.send('EMPTY_DATA_ENDTIME');
-        else if(!tag) return res.send('EMPTY_DATA_TAG');
+        if(!startTime) return res.send('EMPTY_BODY_STARTTIME');
+        else if(!endTime) return res.send('EMPTY_BODY_ENDTIME');
+        else if(!tag) return res.send('EMPTY_BODY_TAG');
     
         const matchData = {
             //id: id,
@@ -35,7 +35,18 @@ const matchController = {
         }
     
         const userList = await matchProvider.retrieveUserList(matchData);
+        
         return res.send(userList);
+    },
+
+    getProfile: async(req, res) => {
+        const id = req.params.id;
+
+        if(!id) return res.send('EMPTY_PARAMS_ID');
+
+        const userProfile = await matchProvider.retrieveUserProfile(id);
+        
+        return res.send(userProfile);
     }
 }
 

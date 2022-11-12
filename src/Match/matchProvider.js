@@ -8,6 +8,14 @@ const matchProvider = {
         connection.release();
     
         return userListResult;
+    },
+
+    retrieveUserProfile: async(id) => {
+        const connection = await pool2.getConnection(async (conn) => conn);
+        const userProfile = await matchDao.selectUserProfile(connection, id);
+        connection.release();
+    
+        return userProfile;
     }
 }
 
