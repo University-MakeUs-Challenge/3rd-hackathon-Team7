@@ -52,7 +52,7 @@
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼1"
+                    android:text="#축구"
                     android:textColor="#39618C"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -63,7 +63,7 @@
                     android:layout_height="140dp"
                     android:layout_marginStart="50dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼2"
+                    android:text="#농구"
                     android:textColor="#39618C"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -74,7 +74,7 @@
                     android:layout_height="140dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼3"
+                    android:text="#당구"
                     android:textColor="#39618C"
                     android:textStyle="bold"
                     android:textSize="20dp" />
@@ -86,7 +86,7 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼4"
+                    android:text="#볼링"
                     android:textColor="#39618C"
                     android:textStyle="bold"
                     android:textSize="20dp" />
@@ -97,7 +97,7 @@
                     android:layout_height="140dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼5"
+                    android:text="테니스"
                     android:textColor="#39618C"
                     android:textStyle="bold"
                     android:textSize="20dp" />
@@ -109,7 +109,7 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼6"
+                    android:text="#헬스"
                     android:textColor="#39618C"
                     android:textStyle="bold"
                     android:textSize="20dp" />
@@ -120,7 +120,7 @@
                     android:layout_height="140dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼7"
+                    android:text="#스키"
                     android:textColor="#39618C"
                     android:textStyle="bold"
                     android:textSize="20dp" />
@@ -132,7 +132,7 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼8"
+                    android:text="#수영"
                     android:textColor="#39618C"
                     android:textStyle="bold"
                     android:textSize="20dp" />
@@ -143,7 +143,7 @@
                     android:layout_height="140dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼9"
+                    android:text="#야구"
                     android:textColor="#39618C"
                     android:textStyle="bold"
                     android:textSize="20dp" />
@@ -155,7 +155,7 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/button_round"
-                    android:text="#버튼10"
+                    android:text="#골프"
                     android:textColor="#39618C"
                     android:textStyle="bold"
                     android:textSize="20dp" />
