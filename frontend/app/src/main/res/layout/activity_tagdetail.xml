@@ -29,6 +29,19 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"/>
 
+    <Button
+        android:id="@+id/btn_complete"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_find_friend"
+        android:backgroundTint="#39618C"
+        android:textColor="@color/white"
+        android:text="완료"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
