@@ -11,11 +11,88 @@
         android:layout_height="wrap_content"
         android:text="원하는 태그를 선택해주세요"
         android:textColor="#39618C"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="30dp"/>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/want_tag"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_find_friend"
+                android:text="#태그1"
+                android:textSize="16dp"
+                android:textColor="#39618C"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_find_friend"
+                android:text="#태그1"
+                android:textSize="16dp"
+                android:textColor="#39618C"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_find_friend"
+                android:text="#태그1"
+                android:textSize="16dp"
+                android:textColor="#39618C"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_find_friend"
+                android:text="#태그1"
+                android:textSize="16dp"
+                android:textColor="#39618C"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_find_friend"
+                android:text="#태그1"
+                android:textSize="16dp"
+                android:textColor="#39618C"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
 
     <TextView
         android:id="@+id/textView4"
@@ -23,28 +100,41 @@
         android:layout_height="wrap_content"
         android:text="원하는 시간대를 입력해주세요."
         android:textColor="#39618C"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button11"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/want_tag"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="30dp"/>
 
-    <TextView
-        android:id="@+id/textView5"
+
+    <Button
+        android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="376dp" />
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_find_friend"
+        android:backgroundTint="#C2CEDB"
+        android:text="12:00"
+        android:textColor="#39618C"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView6"
+    <Button
+        android:id="@+id/button12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="325dp" />
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/button_find_friend"
+        android:backgroundTint="#C2CEDB"
+        android:text="13:00"
+        android:textColor="#39618C"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/button11" />
 
     <TextView
         android:id="@+id/textView2"
@@ -52,11 +142,12 @@
         android:layout_height="wrap_content"
         android:text="오픈 채팅방을 개설해주세요."
         android:textColor="#39618C"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="30dp"/>
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -66,24 +157,42 @@
         android:hint="링크 입력"
         android:inputType="textPersonName"
         android:textColor="#39618C"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="30dp"/>
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
         android:background="@drawable/button_find_friend"
+        android:backgroundTint="#39618C"
+        android:drawableLeft="@drawable/imgbtn_find"
         android:text="친구 찾기"
-        android:textColor="#39618C"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="~"
+        android:textSize="20dp"
+        android:textColor="#39618C"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        android:layout_marginBottom="60dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
