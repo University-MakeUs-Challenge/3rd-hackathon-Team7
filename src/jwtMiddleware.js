@@ -3,6 +3,7 @@ require('dotenv').config();
 
 module.exports = {
     verifyToken: async (req, res, next) => {
+        console.log("jiih");
         const jwtToken = req.headers.authorization;
         try {
             const decoded = jwt.verify(jwtToken, process.env.SECRET_KEY);
