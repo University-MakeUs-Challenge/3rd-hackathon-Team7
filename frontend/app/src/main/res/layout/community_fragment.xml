@@ -12,7 +12,10 @@
         android:text="@string/community"
         android:textSize="25sp"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/livetalkLayout"/>
 
     <TextView
         android:id="@+id/sentence"
@@ -20,5 +23,120 @@
         android:layout_height="wrap_content"
         android:text="@string/_sentence"
         android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toEndOf="@id/fragment_title"
+        app:layout_constraintBottom_toTopOf="@id/livetalkLayout"/>
+
+    <ImageButton
+        android:id="@+id/myHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blue_user"
+        android:background="@color/white"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@id/write"
+        app:layout_constraintBottom_toTopOf="@id/livetalkLayout"
+        />
+
+    <ImageButton
+        android:id="@+id/write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pen"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/livetalkLayout"
+        app:layout_constraintBottom_toTopOf="@id/livetalkLayout"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/livetalkLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/slimborder_layout"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/fragment_title"
+        app:layout_constraintBottom_toTopOf="@id/toptalkLayout"
+        app:layout_constraintVertical_weight="0.5">
+
+        <TextView
+            android:id="@+id/livetalk_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/livetalk"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="@id/livetalkLayout"
+            app:layout_constraintTop_toTopOf="@id/livetalkLayout"/>
+
+        <View
+            android:id="@+id/livetalk_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#39618C"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toStartOf="@id/livetalkLayout"
+            app:layout_constraintEnd_toEndOf="@id/livetalkLayout"
+            app:layout_constraintTop_toBottomOf="@id/livetalk_title"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/livetalk_rv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/livetalkLayout"
+            app:layout_constraintEnd_toEndOf="@id/livetalkLayout"
+            app:layout_constraintTop_toBottomOf="@id/livetalk_line"
+            app:layout_constraintBottom_toBottomOf="@id/livetalkLayout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toptalkLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/slimborder_layout"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@id/livetalkLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="0.5">
+
+        <TextView
+            android:id="@+id/toptalk_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toptalk"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="@id/toptalkLayout"
+            app:layout_constraintTop_toTopOf="@id/toptalkLayout"/>
+
+        <View
+            android:id="@+id/toptalk_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#39618C"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toStartOf="@id/toptalkLayout"
+            app:layout_constraintEnd_toEndOf="@id/toptalkLayout"
+            app:layout_constraintTop_toBottomOf="@id/toptalk_title"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toptalk_rv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/toptalkLayout"
+            app:layout_constraintEnd_toEndOf="@id/toptalkLayout"
+            app:layout_constraintTop_toBottomOf="@id/toptalk_line"
+            app:layout_constraintBottom_toBottomOf="@id/toptalkLayout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
