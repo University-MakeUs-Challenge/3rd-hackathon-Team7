@@ -1,4 +1,4 @@
-package com.jiwoorld.umc
+package com.example.hackathon7
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

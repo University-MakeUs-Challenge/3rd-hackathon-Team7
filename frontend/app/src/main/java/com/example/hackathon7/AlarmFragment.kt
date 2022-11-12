@@ -11,12 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 
 /*class AlarmFragment : AppCompatActivity() {
 
-    val UserList = arrayListOf<User>(
-        User(R.drawable.bell, "새 친구의 요청이 왔어요 :)"),
-        User(R.drawable.bell, "새 친구의 요청이 왔어요 :)"),
-        User(R.drawable.bell, "새 친구의 요청이 왔어요 :)")
-    )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_alarm)

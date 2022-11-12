@@ -1,4 +1,4 @@
-package com.jiwoorld.umc
+package com.example.hackathon7
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,14 +11,15 @@ import com.example.hackathon7.R
 import com.example.hackathon7.databinding.ActivityNaviBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-
+import com.jiwoorld.umc.CommunityFragment
+import com.jiwoorld.umc.SearchFragment
 
 
 private const val TAG_MY = "my_fragment"
 private const val TAG_SEARCH = "search_fragment"
 private const val TAG_COMMUNITY = "community_fragment"
 
-class NaviActivity : AppCompatActivity() {
+class NaviActivity1 : AppCompatActivity() {
 
     private lateinit var binding : ActivityNaviBinding
 
@@ -28,11 +29,11 @@ class NaviActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        setFragment(TAG_MY, MyFragment())
+        setFragment(TAG_MY, MypageFragment())
 
         binding.navigationView.setOnItemSelectedListener { item ->
             when(item.itemId) {
-                R.id.myFragment -> setFragment(TAG_MY, MyFragment())
+                R.id.myFragment -> setFragment(TAG_MY, MypageFragment())
                 R.id.searchFragment -> setFragment(TAG_SEARCH, SearchFragment())
                 R.id.communityFragment-> setFragment(TAG_COMMUNITY, CommunityFragment())
             }
@@ -89,4 +90,3 @@ class NaviActivity : AppCompatActivity() {
 
 
 }
-
